@@ -38,7 +38,8 @@ The catalog below comes from `curso/curso.json`. Click a title to watch the chap
 Prerequisites: Python 3.10 or later, ffmpeg (with ffprobe on PATH), and Pillow. In a Python environment with these dependencies available, run:
 
 ```bash
-python3 -m pip install -r requirements.txt
+python3 -m venv .venv && source .venv/bin/activate   # environment just for the kit
+pip install -r requirements.txt
 python3 ferramentas/videos_de_teste.py   # cria 3 vídeos de teste em exemplos/videos/
 python3 ferramentas/montar_curso.py exemplos/meu-curso.json --saida saida/curso.mp4
 ```

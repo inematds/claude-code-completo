@@ -38,7 +38,7 @@
       "aprende": "Como ler os registros que o Claude Code e o Codex já gravam no seu computador para ver qual projeto ou rotina gastou o limite da semana da sua assinatura.",
       "guia": "https://inematds.github.io/medidor-de-limite/guia/",
       "youtube": "https://www.youtube.com/watch?v=sYEEo7CnTys",
-      "prompt": "Rode o medidor do kit medidor-de-limite nesta máquina e me explique o resultado: qual projeto ou rotina mais gastou o meu limite nos últimos 7 dias e o que eu posso juntar ou espaçar para gastar menos."
+      "prompt": "Baixe o kit medidor-de-limite (https://github.com/inematds/medidor-de-limite), siga o README dele para rodar o medidor nesta máquina e me explique o resultado: qual projeto ou rotina mais gastou o meu limite nos últimos 7 dias e o que eu posso juntar ou espaçar para gastar menos. Não apague nem pause nada."
     },
     {
       "id": "frases",
@@ -65,7 +65,7 @@
       "aprende": "Os degraus para o agente parar de repetir o mesmo erro: anotar a falha, separar erro de pedido de erro de máquina e transformar a lição numa trava automática.",
       "guia": "https://inematds.github.io/agente-que-aprende/guia/",
       "youtube": "https://www.youtube.com/watch?v=l-D13_QGtHk",
-      "prompt": "Leia o FALHAS.md e o LESSONS.md deste projeto. Me mostre os 3 erros que mais voltam e, para cada um, proponha uma trava automática (um teste, um hook ou uma checagem) em vez de mais uma regra escrita. Não aplique nada sem eu aprovar."
+      "prompt": "Procure neste projeto onde eu anoto os erros que você cometeu e as correções (por exemplo FALHAS.md ou LESSONS.md). Se não existir, crie um FALHAS.md com uma linha por erro que eu corrigir daqui para a frente. Depois mostre os erros que mais voltam e proponha, para cada um, uma trava automática (um teste, um hook ou uma checagem) em vez de mais uma regra escrita. Não aplique nada sem eu aprovar."
     },
     {
       "id": "rea",

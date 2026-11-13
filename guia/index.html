@@ -181,7 +181,8 @@
 <section id="capitulos"><div class="wrap">
 <span class="chip">Capítulos</span>
 <h2>Do básico ao avançado, <span class="amb">na ordem</span></h2>
-<p class="sub">Clique no tempo para abrir o curso naquele ponto. Cada capítulo tem o guia completo do assunto (grátis) e um prompt pronto: abra o Claude Code na pasta certa e cole.</p>
+<p class="sub">Clique no tempo para abrir o curso naquele ponto. Cada capítulo tem o guia completo do assunto (grátis) e um prompt pronto. Os prompts dos capítulos 1, 2 e 5 vão no chat do Claude (no site ou no app); os outros, no Claude Code aberto na pasta do seu trabalho, onde estão os arquivos que ele vai ler.</p>
+<div class="nota" style="margin:0 0 22px"><b>Nunca abriu o Claude Code?</b> Ele vem no app do Claude para computador (planos pagos) e também roda no terminal. O passo a passo oficial de instalação está em <a href="https://code.claude.com/docs" rel="noopener" target="_blank">code.claude.com/docs</a>, e o capítulo 3 mostra o que ele faz no seu computador.</div>
 <div class="cap"><div><span class="n">01</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=0s" rel="noopener" target="_blank">00:00</a></div><div>
 <h3>As 25 peças do Claude</h3>
 <p>O mapa do Claude para quem não programa: os modelos, os projetos, a memória, os conectores, as skills, o Cowork e o Claude Code, e o que cada plano libera.</p>
@@ -204,7 +205,7 @@
 <h3>Quem comeu o seu limite</h3>
 <p>Como ler os registros que o Claude Code e o Codex já gravam no seu computador para ver qual projeto ou rotina gastou o limite da semana da sua assinatura.</p>
 <div class="lk"><a href="https://inematds.github.io/medidor-de-limite/guia/" rel="noopener" target="_blank">Guia do capítulo →</a><a href="https://www.youtube.com/watch?v=sYEEo7CnTys" rel="noopener" target="_blank">Vídeo avulso</a></div>
-<details><summary>Prompt pronto</summary><pre><span class="s">Rode o medidor do kit medidor-de-limite nesta máquina e me explique o resultado: qual projeto ou rotina mais gastou o meu limite nos últimos 7 dias e o que eu posso juntar ou espaçar para gastar menos.</span></pre></details>
+<details><summary>Prompt pronto</summary><pre><span class="s">Baixe o kit medidor-de-limite (https://github.com/inematds/medidor-de-limite), siga o README dele para rodar o medidor nesta máquina e me explique o resultado: qual projeto ou rotina mais gastou o meu limite nos últimos 7 dias e o que eu posso juntar ou espaçar para gastar menos. Não apague nem pause nada.</span></pre></details>
 </div></div>
 <div class="cap"><div><span class="n">05</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=713s" rel="noopener" target="_blank">11:53</a></div><div>
 <h3>As 8 frases que pedem prova</h3>
@@ -222,7 +223,7 @@
 <h3>O agente que aprende com o erro</h3>
 <p>Os degraus para o agente parar de repetir o mesmo erro: anotar a falha, separar erro de pedido de erro de máquina e transformar a lição numa trava automática.</p>
 <div class="lk"><a href="https://inematds.github.io/agente-que-aprende/guia/" rel="noopener" target="_blank">Guia do capítulo →</a><a href="https://www.youtube.com/watch?v=l-D13_QGtHk" rel="noopener" target="_blank">Vídeo avulso</a></div>
-<details><summary>Prompt pronto</summary><pre><span class="s">Leia o FALHAS.md e o LESSONS.md deste projeto. Me mostre os 3 erros que mais voltam e, para cada um, proponha uma trava automática (um teste, um hook ou uma checagem) em vez de mais uma regra escrita. Não aplique nada sem eu aprovar.</span></pre></details>
+<details><summary>Prompt pronto</summary><pre><span class="s">Procure neste projeto onde eu anoto os erros que você cometeu e as correções (por exemplo FALHAS.md ou LESSONS.md). Se não existir, crie um FALHAS.md com uma linha por erro que eu corrigir daqui para a frente. Depois mostre os erros que mais voltam e proponha, para cada um, uma trava automática (um teste, um hook ou uma checagem) em vez de mais uma regra escrita. Não aplique nada sem eu aprovar.</span></pre></details>
 </div></div>
 <div class="cap"><div><span class="n">08</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=1163s" rel="noopener" target="_blank">19:23</a></div><div>
 <h3>Refazer um app pedindo prova</h3>
@@ -259,6 +260,11 @@
 <dt>Prompt</dt><dd>o pedido que você escreve para a IA.</dd>
 <dt>Agente</dt><dd>uma IA que não só responde: executa passos sozinha (abre arquivos, roda comandos) até terminar a tarefa.</dd>
 <dt>Kit</dt><dd>o pacote grátis de cada capítulo: guia, exemplos e, quando há, scripts prontos.</dd>
+<dt>Terminal</dt><dd>a janela de comandos do computador, onde você digita os comandos da parte técnica.</dd>
+<dt>Pasta do trabalho</dt><dd>a pasta onde estão os arquivos que o Claude Code vai ler e mexer; ele só enxerga o que está nela.</dd>
+<dt>Hook</dt><dd>uma checagem automática que o Claude Code roda antes ou depois de uma ação.</dd>
+<dt>Timer, cron</dt><dd>agendadores que rodam uma tarefa sozinhos, na hora marcada.</dd>
+<dt>JSON</dt><dd>um arquivo de texto com campos entre chaves; é a lista do curso que a ferramenta lê.</dd>
 <dt>Assinatura</dt><dd>o plano mensal do Claude (Pro, Max) ou do ChatGPT; nenhum capítulo pede chave de API paga por uso.</dd>
 </dl></div>
 </div></section>
@@ -266,10 +272,10 @@
 <span class="chip">Por que um vídeo longo</span>
 <h2>Quem quer aprender <span class="amb">fica</span></h2>
 <p class="sub">O nosso <a href="https://inematds.github.io/youtube-bombando/guia/" rel="noopener" target="_blank">radar do que bomba</a> acompanhou 320 vídeos de 7 assuntos de IA (rodada de 12/11/2026) e comparou cada vídeo com o normal do próprio canal. Os vídeos de mais de uma hora foram os que mais passaram do normal.</p>
-<div aria-label="Quantas vezes o normal do próprio canal, em média, por duração do vídeo: mais de 60 minutos 4,2 vezes; 8 a 20 minutos 1,8 vez; 20 a 60 minutos 1,0 vez" class="barras" role="img">
-<div class="barra"><span>mais de 60 min</span><div class="trilho"><div class="enche" style="width:100%"></div></div><b>4,2×</b></div>
+<div aria-label="Quantas vezes o normal do próprio canal, em média, por duração do vídeo: 8 a 20 minutos 1,8 vez; 20 a 60 minutos 1,0 vez; mais de 60 minutos 4,2 vezes" class="barras" role="img">
 <div class="barra"><span>8 a 20 min</span><div class="trilho"><div class="enche fraco" style="width:43%"></div></div><b>1,8×</b></div>
 <div class="barra"><span>20 a 60 min</span><div class="trilho"><div class="enche fraco" style="width:24%"></div></div><b>1,0×</b></div>
+<div class="barra"><span>mais de 60 min</span><div class="trilho"><div class="enche" style="width:100%"></div></div><b>4,2×</b></div>
 </div>
 <p class="mut" style="margin-top:10px;font-size:.88rem">Média de quantas vezes o normal do próprio canal cada vídeo fez, por duração. Fonte: radar do que bomba, INEMA, 12/11/2026.</p>
 <div class="nota"><b>O caso que mais chamou atenção:</b> um curso completo de Claude Code, de 5 horas, num canal com cerca de 7 mil inscritos, fez <b>513 vezes</b> o normal do canal. Quem procura aprender quer o caminho inteiro, num lugar só. <b>Sendo honesto:</b> este primeiro curso tem 33 minutos, porque usamos só vídeos nossos; ele cresce a cada capítulo novo. E com o kit abaixo você monta o seu curso longo com os seus vídeos.</div>
@@ -305,13 +311,18 @@
 <section id="pre"><div class="wrap">
 <span class="chip">Pré-requisitos</span>
 <h2>O que você precisa</h2>
+<p class="sub">Tudo roda no <strong>terminal</strong>, a janela de comandos do computador: no Mac, abra o app Terminal; no Linux, Ctrl+Alt+T. Os comandos são para Mac e Linux; no Windows, use o WSL (o Ubuntu dentro do Windows) e siga como no Linux.</p>
 <div class="grid g3">
-<div class="card"><h3>Python 3.10 ou mais novo</h3><p>Confira com o comando abaixo.</p><pre><span class="k">python3 --version</span></pre></div>
-<div class="card"><h3>ffmpeg</h3><p>Ubuntu: <code>sudo apt install ffmpeg</code>. Mac: <code>brew install ffmpeg</code>. Windows: instale pelo site do ffmpeg e coloque no PATH.</p><pre><span class="k">ffmpeg -version</span></pre></div>
-<div class="card"><h3>O kit e o Pillow</h3><p>Baixe o repositório e instale a única dependência:</p><pre><span class="k">git clone https://github.com/inematds/claude-code-completo</span>
-<span class="k">cd claude-code-completo</span>
-<span class="k">python3 -m pip install -r requirements.txt</span></pre></div>
+<div class="card"><h3>Python 3.10 ou mais novo</h3><p>Confira com o comando abaixo. Se não tiver, baixe em <a href="https://www.python.org/downloads/" rel="noopener" target="_blank">python.org</a>.</p><pre><span class="k">python3 --version</span></pre></div>
+<div class="card"><h3>ffmpeg</h3><p>O programa que junta e converte os vídeos. Ubuntu/WSL: <code>sudo apt install ffmpeg</code>. Mac: <code>brew install ffmpeg</code>.</p><pre><span class="k">ffmpeg -version</span></pre></div>
+<div class="card"><h3>O kit</h3><p>Com o git, o comando abaixo. Sem o git: no <a href="https://github.com/inematds/claude-code-completo" rel="noopener" target="_blank">GitHub do kit</a>, botão "Code" → "Download ZIP", e descompacte.</p><pre><span class="k">git clone https://github.com/inematds/claude-code-completo</span>
+<span class="k">cd claude-code-completo</span></pre></div>
 </div>
+<h3 style="margin:26px 0 8px;font-size:1.1rem">Instale o Pillow num ambiente só do kit</h3>
+<p class="mut" style="margin:0 0 10px">O Pillow desenha os cartões de capítulo. Instale num ambiente separado (venv), que funciona até nos sistemas que bloqueiam o <code>pip</code> direto. Dentro da pasta do kit:</p>
+<pre><span class="k">python3 -m venv .venv</span>
+<span class="k">source .venv/bin/activate</span>
+<span class="k">pip install -r requirements.txt</span>   <span class="c"># na próxima vez, basta o source .venv/bin/activate</span></pre>
 </div></section>
 <section id="guia"><div class="wrap">
 <span class="chip">Guia de uso · passo a passo</span>
@@ -324,10 +335,10 @@
 </div></div>
 <div class="step"><div class="b">2</div><div>
 <h3>Escreva a lista do seu curso</h3>
-<p>Copie o exemplo e troque título, descrições e, em cada capítulo, o arquivo e o título. O caminho do vídeo pode ser relativo ao arquivo, absoluto ou começar com <code>~</code>.</p>
+<p>Copie o exemplo para a pasta do kit e abra a cópia num editor de texto (TextEdit, Bloco de Notas ou VS Code). Troque o título, as descrições e, em cada capítulo, o arquivo e o título. Use o <strong>caminho completo</strong> de cada vídeo (ex.: <code>~/Videos/aula1.mp4</code>): os caminhos curtos do exemplo (<code>videos/aula1.mp4</code>) só valem dentro da pasta <code>exemplos/</code>. Os nomes dos campos (<code>titulo</code>, <code>capitulos</code>, <code>arquivo</code>) ficam como estão: a ferramenta só lê esses.</p>
 <pre><span class="k">cp exemplos/meu-curso.json meu-curso.json</span>
 <span class="c"># {"titulo": "...", "descricao_topo": "...", "descricao_fim": "...",</span>
-<span class="c">#  "capitulos": [{"arquivo": "~/videos/aula1.mp4", "titulo": "Primeiros passos"}, ...]}</span></pre>
+<span class="c">#  "capitulos": [{"arquivo": "~/Videos/aula1.mp4", "titulo": "Primeiros passos"}, ...]}</span></pre>
 </div></div>
 <div class="step"><div class="b">3</div><div>
 <h3>Confira os tempos antes de renderizar</h3>

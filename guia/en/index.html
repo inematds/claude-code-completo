@@ -181,7 +181,8 @@
 <section id="capitulos"><div class="wrap">
 <span class="chip">Chapters</span>
 <h2>From beginner to advanced, <span class="amb">in order</span></h2>
-<p class="sub">Click the time to open the course at that point. Each chapter has a complete guide to the topic (free) and a ready-to-copy prompt: open Claude Code in the right folder and paste it.</p>
+<p class="sub">Click the time to open the course at that point. Each chapter has a complete guide to the topic (free) and a ready-to-copy prompt. The prompts for chapters 1, 2 and 5 go in the Claude chat (website or app); the others go in Claude Code, opened in your work folder, where the files it will read are.</p>
+<div class="nota" style="margin:0 0 22px"><b>Never opened Claude Code?</b> It comes with the Claude desktop app (paid plans) and also runs in the terminal. The official installation steps are at <a href="https://code.claude.com/docs" rel="noopener" target="_blank">code.claude.com/docs</a>, and chapter 3 shows what it does on your computer.</div>
 <div class="cap"><div><span class="n">01</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=0s" rel="noopener" target="_blank">00:00</a></div><div>
 <h3>Claude's 25 pieces</h3>
 <p>Claude's guide for people who don't code: models, projects, memory, connectors, skills, Cowork, and Claude Code, and what each plan includes.</p>
@@ -204,7 +205,7 @@
 <h3>Who used up your limit</h3>
 <p>How to read the logs that Claude Code and Codex already save on your computer to see which project or routine used up your subscription's weekly limit.</p>
 <div class="lk"><a href="https://inematds.github.io/medidor-de-limite/guia/en/" rel="noopener" target="_blank">Chapter guide →</a><a href="https://www.youtube.com/watch?v=sYEEo7CnTys" rel="noopener" target="_blank">Standalone video (in Portuguese)</a></div>
-<details><summary>Ready-to-use prompt</summary><pre><span class="s">Run the meter from the medidor-de-limite kit on this machine and explain the result: which project or routine used the most of my limit in the last 7 days, and what I can merge or space out to use less.</span></pre></details>
+<details><summary>Ready-to-use prompt</summary><pre><span class="s">Download the medidor-de-limite kit (https://github.com/inematds/medidor-de-limite), follow its README to run the meter on this machine and explain the result: which project or routine used the most of my limit in the last 7 days, and what I can merge or space out to use less. Do not delete or pause anything.</span></pre></details>
 </div></div>
 <div class="cap"><div><span class="n">05</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=713s" rel="noopener" target="_blank">11:53</a></div><div>
 <h3>The 8 phrases that ask for proof</h3>
@@ -222,7 +223,7 @@
 <h3>The agent that learns from mistakes</h3>
 <p>The steps that help an agent stop repeating the same mistake: record the failure, separate a request error from a machine error, and turn the lesson into an automatic safeguard.</p>
 <div class="lk"><a href="https://inematds.github.io/agente-que-aprende/guia/en/" rel="noopener" target="_blank">Chapter guide →</a><a href="https://www.youtube.com/watch?v=l-D13_QGtHk" rel="noopener" target="_blank">Standalone video (in Portuguese)</a></div>
-<details><summary>Ready-to-use prompt</summary><pre><span class="s">Read this project's FALHAS.md and LESSONS.md. Show me the 3 errors that come back most often and, for each one, suggest an automatic lock (a test, a hook or a check) instead of one more written rule. Do not apply anything without my approval.</span></pre></details>
+<details><summary>Ready-to-use prompt</summary><pre><span class="s">Look in this project for where I note the mistakes you made and the fixes (for example FALHAS.md or LESSONS.md). If there is none, create a FALHAS.md with one line per mistake I correct from now on. Then show me the mistakes that come back most often and, for each one, suggest an automatic lock (a test, a hook or a check) instead of one more written rule. Do not apply anything without my approval.</span></pre></details>
 </div></div>
 <div class="cap"><div><span class="n">08</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=1163s" rel="noopener" target="_blank">19:23</a></div><div>
 <h3>Rebuild an app by asking for proof</h3>
@@ -259,6 +260,11 @@
 <dt>Prompt</dt><dd>the prompt you write for the AI.</dd>
 <dt>Agent</dt><dd>an AI that doesn't just answer: it carries out steps on its own (opens files, runs commands) until the task is done.</dd>
 <dt>Kit</dt><dd>the free package for each chapter: guide, examples, and, when available, ready-to-use scripts.</dd>
+<dt>Terminal</dt><dd>your computer's command window, where you type the commands in the technical part.</dd>
+<dt>Work folder</dt><dd>the folder with the files Claude Code will read and change; it only sees what is in it.</dd>
+<dt>Hook</dt><dd>an automatic check that Claude Code runs before or after an action.</dd>
+<dt>Timer, cron</dt><dd>schedulers that run a task on their own, at a set time.</dd>
+<dt>JSON</dt><dd>a text file with fields inside braces; it is the course list the tool reads.</dd>
 <dt>Subscription</dt><dd>Claude's (Pro, Max) or ChatGPT's monthly plan; no chapter requires a paid API key billed by usage.</dd>
 </dl></div>
 </div></section>
@@ -267,11 +273,11 @@
 <h2>Who wants to learn <span class="amb">stays</span></h2>
 <p class="sub">Our <a href="https://inematds.github.io/youtube-bombando/guia/en/" rel="noopener" target="_blank">what's trending radar</a> tracked 320 videos across 7 AI topics (November 12, 2026 run) and compared each video with its channel’s usual performance. Videos over an hour were the ones that most exceeded the norm.</p>
 <div aria-label="Average views compared with the channel’s usual performance, by video length: over 60 minutes, 4.2×; 8 to 20 minutes, 1.8×; 20 to 60 minutes, 1.0×" class="barras" role="img">
-<div class="barra"><span>over 60 min</span><div class="trilho"><div class="enche" style="width:100%"></div></div><b>4,2×</b></div>
-<div class="barra"><span>8 to 20 min</span><div class="trilho"><div class="enche fraco" style="width:43%"></div></div><b>1,8×</b></div>
-<div class="barra"><span>20 to 60 min</span><div class="trilho"><div class="enche fraco" style="width:24%"></div></div><b>1,0×</b></div>
+<div class="barra"><span>8 to 20 min</span><div class="trilho"><div class="enche fraco" style="width:43%"></div></div><b>1.8×</b></div>
+<div class="barra"><span>20 to 60 min</span><div class="trilho"><div class="enche fraco" style="width:24%"></div></div><b>1.0×</b></div>
+<div class="barra"><span>over 60 min</span><div class="trilho"><div class="enche" style="width:100%"></div></div><b>4.2×</b></div>
 </div>
-<p class="mut" style="margin-top:10px;font-size:.88rem">Average number of times each video performed above the channel's usual level, by duration. Source: radar do que bomba, INEMA, 12/11/2026.</p>
+<p class="mut" style="margin-top:10px;font-size:.88rem">Average number of times each video performed above the channel's usual level, by duration. Source: INEMA's what's trending radar, November 12, 2026.</p>
 <div class="nota"><b>The case that drew the most attention:</b> a 5-hour complete Claude Code course on a channel with around 7,000 subscribers got <b>513 times</b> the channel's usual format. People looking to learn want the whole journey in one place. <b>Honestly:</b> This first course is 33 minutes long because we only use our own videos; it grows with each new chapter. And with the kit below, you can build your own long-form course using your own videos.</div>
 </div></section>
 <div class="techhead" id="tecnico"><div class="wrap">
@@ -305,29 +311,34 @@
 <section id="pre"><div class="wrap">
 <span class="chip">Prerequisites</span>
 <h2>What you need</h2>
+<p class="sub">Everything runs in the <strong>terminal</strong>, your computer's command window: on a Mac, open the Terminal app; on Linux, press Ctrl+Alt+T. The commands are for Mac and Linux; on Windows, use WSL (Ubuntu inside Windows) and follow the Linux steps.</p>
 <div class="grid g3">
-<div class="card"><h3>Python 3.10 or newer</h3><p>Check with the command below.</p><pre><span class="k">python3 --version</span></pre></div>
-<div class="card"><h3>ffmpeg</h3><p>Ubuntu: <code>sudo apt install ffmpeg</code>. Mac: <code>brew install ffmpeg</code>. Windows: install it from the ffmpeg website and add it to the PATH.</p><pre><span class="k">ffmpeg -version</span></pre></div>
-<div class="card"><h3>The kit and Pillow</h3><p>Download the repository and install the only dependency:</p><pre><span class="k">git clone https://github.com/inematds/claude-code-completo</span>
-<span class="k">cd claude-code-completo</span>
-<span class="k">python3 -m pip install -r requirements.txt</span></pre></div>
+<div class="card"><h3>Python 3.10 or newer</h3><p>Check with the command below. If you don't have it, download it from <a href="https://www.python.org/downloads/" rel="noopener" target="_blank">python.org</a>.</p><pre><span class="k">python3 --version</span></pre></div>
+<div class="card"><h3>ffmpeg</h3><p>The program that joins and converts the videos. Ubuntu/WSL: <code>sudo apt install ffmpeg</code>. Mac: <code>brew install ffmpeg</code>.</p><pre><span class="k">ffmpeg -version</span></pre></div>
+<div class="card"><h3>The kit</h3><p>With git, the command below. Without git: on the <a href="https://github.com/inematds/claude-code-completo" rel="noopener" target="_blank">kit's GitHub page</a>, click "Code" → "Download ZIP" and unzip it.</p><pre><span class="k">git clone https://github.com/inematds/claude-code-completo</span>
+<span class="k">cd claude-code-completo</span></pre></div>
 </div>
+<h3 style="margin:26px 0 8px;font-size:1.1rem">Install Pillow in an environment just for the kit</h3>
+<p class="mut" style="margin:0 0 10px">Pillow draws the chapter cards. Install it in a separate environment (venv), which works even on systems that block <code>pip</code> directly. Inside the kit folder:</p>
+<pre><span class="k">python3 -m venv .venv</span>
+<span class="k">source .venv/bin/activate</span>
+<span class="k">pip install -r requirements.txt</span>   <span class="c"># next time, just run source .venv/bin/activate</span></pre>
 </div></section>
 <section id="guia"><div class="wrap">
 <span class="chip">User guide · step by step</span>
 <h2>In <span class="amb">5 minutes</span></h2>
 <div class="step"><div class="b">1</div><div>
 <h3>Run the example</h3>
-<p>Create three test videos and put together a 45-second course with them to see the result before using yours:</p>
+<p>Create three test videos and build a 45-second course with them, to see the result before using your own:</p>
 <pre><span class="k">python3 ferramentas/videos_de_teste.py</span>
 <span class="k">python3 ferramentas/montar_curso.py exemplos/meu-curso.json --saida saida/curso.mp4</span></pre>
 </div></div>
 <div class="step"><div class="b">2</div><div>
 <h3>Write your course list</h3>
-<p>Copy the example and replace the title, descriptions, and, for each chapter, the file and title. The video path can be relative to the file, absolute, or start with <code>~</code>.</p>
+<p>Copy the example into the kit folder and open the copy in a text editor (TextEdit, Notepad or VS Code). Replace the title, the descriptions and, in each chapter, the file and the title. Use the <strong>full path</strong> of each video (e.g. <code>~/Videos/lesson1.mp4</code>): the short paths in the example (<code>videos/aula1.mp4</code>) only work inside the <code>exemplos/</code> folder. Keep the field names as they are (<code>titulo</code>, <code>capitulos</code>, <code>arquivo</code>, in Portuguese): the tool only reads those.</p>
 <pre><span class="k">cp exemplos/meu-curso.json meu-curso.json</span>
-<span class="c"># {"title": "...", "descricao_topo": "...", "descricao_fim": "...",</span>
-<span class="c">#  "chapters": [{"file": "~/videos/aula1.mp4", "title": "First Steps"}, ...]}</span></pre>
+<span class="c"># {"titulo": "...", "descricao_topo": "...", "descricao_fim": "...",</span>
+<span class="c">#  "capitulos": [{"arquivo": "~/Videos/lesson1.mp4", "titulo": "First steps"}, ...]}</span></pre>
 </div></div>
 <div class="step"><div class="b">3</div><div>
 <h3>Check the timings before rendering</h3>
