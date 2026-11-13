@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>claude-code-completo — Claude Code desde cero hasta avanzado en un solo video</title>
+<meta content="Aprende Claude Code desde cero hasta un nivel avanzado en un solo video, gratis: curso completo por capítulos, cada uno con un kit, una guía y un prompt listo. Y la herramienta para armar tu propio curso largo." name="description"/>
+
+
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#a3a3b2}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  body.light nav{background:rgba(246,247,249,.85)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb);white-space:nowrap}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut);white-space:nowrap} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:1180px){nav .links{gap:14px;font-size:.86rem}}
+  @media(max-width:1080px){nav .links a.sec[href="#porque"]{display:none}}
+  @media(max-width:900px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:36ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;height:auto;display:block}
+  .resumo{padding:38px 0 34px;border-bottom:1px solid var(--line)}
+  .resumo p{font-size:1.12rem;line-height:1.7;max-width:74ch;margin:.55em 0 0}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:64ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0;white-space:pre-wrap;overflow-wrap:anywhere}
+  pre .c{color:#a3a3b2} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  body.light pre .k{color:#f0c070}
+  .step{display:grid;grid-template-columns:46px minmax(0,1fr);gap:16px;margin-bottom:26px}
+  .step>div{min-width:0}
+  p code,li code,td code{overflow-wrap:anywhere}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+  .techhead{background:var(--bg2);border-top:3px solid var(--amb);padding:58px 0 8px}
+  .techhead h2{font-family:Sora;margin:.3em 0 0}
+  .techzone{background:var(--bg2)}
+  .yt{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000}
+  .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .cap{display:grid;grid-template-columns:62px minmax(0,1fr);gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px}
+  .cap .n{font-family:Sora;font-weight:800;font-size:1.6rem;color:var(--amb);line-height:1}
+  .cap .t{display:block;font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--mut);margin-top:6px}
+  .cap h3{font-size:1.12rem;margin-bottom:.35em}
+  .cap p{color:var(--mut);margin:0 0 .6em;font-size:.95rem}
+  .cap .lk{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.88rem;margin-bottom:.6em}
+  .cap details summary{cursor:pointer;color:var(--txt);font-size:.9rem;font-weight:600}
+  .cap details pre{margin:10px 0 0}
+  @media(max-width:540px){.cap{grid-template-columns:1fr;gap:6px}}
+  .barras{display:grid;gap:12px;margin-top:8px}
+  .barra{display:grid;grid-template-columns:150px minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:.92rem}
+  .barra .trilho{background:var(--bg2);border:1px solid var(--line);border-radius:8px;height:26px;overflow:hidden}
+  .barra .enche{height:100%;background:var(--amb);border-radius:7px}
+  .barra .enche.fraco{background:var(--mut);opacity:.6}
+  .barra b{font-family:Sora;color:var(--amb)}
+  @media(max-width:540px){.barra{grid-template-columns:96px minmax(0,1fr) 52px;font-size:.85rem}}
+  .nota{margin-top:22px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--amb);border-radius:12px;padding:16px 20px;color:var(--mut)}
+  .nota b{color:var(--txt)}
+  .glos{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+  .glos h3{font-family:Sora;font-size:1rem;margin:0 0 10px}
+  .glos dl{display:grid;grid-template-columns:minmax(120px,max-content) minmax(0,1fr);gap:8px 16px;margin:0;font-size:.9rem}
+  .glos dt{font-weight:600;color:var(--amb)} .glos dd{margin:0;color:var(--mut)}
+  @media(max-width:540px){.glos dl{grid-template-columns:1fr}}
+</style>
+<link href="https://inematds.github.io/claude-code-completo/guia/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/claude-code-completo/guia/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/claude-code-completo/guia/es/" hreflang="es" rel="alternate"/></head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="#top"><span class="emoji">🎓</span> claude-code-completo</a>
+<span class="sep">|</span>
+<span class="clubpro">
+<a class="inema" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<span class="sep">-</span>
+<a class="pro" href="https://inema.pro" rel="noopener" target="_blank">PRO</a>
+</span>
+<div class="links">
+<a class="sec" href="#curso">El curso</a>
+<a class="sec" href="#capitulos">Capítulos</a>
+<a class="sec" href="#porque">Por qué es largo</a>
+<a class="sec" href="#tecnico">Kit (técnico)</a>
+<span class="lang"><a href="../">PT</a><a href="../en/">EN</a><a class="on" href="./">ES</a></span>
+<button aria-label="Cambiar tema" class="tgl" id="themeToggle" title="Cambiar tema">🌙</button>
+<a class="btn" href="https://github.com/inematds/claude-code-completo" rel="noopener" target="_blank">GitHub</a>
+</div>
+</div></nav>
+<header class="hero" id="top">
+<div class="glow"></div>
+<div class="wrap">
+<div>
+<span class="chip">claude-code-completo · curso gratis · en portugués</span>
+<h1>Aprende <span class="amb">Claude Code</span> de cero a avanzado en un solo video</h1>
+<p class="lead">Juntas videos sueltos de aquí y de allá y no sabes por dónde empezar ni qué viene después. El <strong>curso completo en capítulos</strong> pone todo en orden, de lo básico a lo avanzado, y cada capítulo tiene un kit gratis para que lo pongas en práctica ese mismo día.</p>
+<div class="cta">
+<a class="btn" href="#curso">Ver el curso</a>
+<a class="btn ghost" href="#capitulos">Ver los capítulos</a>
+</div>
+</div>
+<figure><img alt="Claude Code completo: desde cero hasta un nivel avanzado en un solo video, curso completo por capítulos, gratis" src="../assets/banner-es.jpg"/></figure>
+</div>
+</header>
+<section class="resumo" id="resumo"><div class="wrap">
+<span class="chip">En resumen</span>
+<p>Claude Code es el asistente de IA de Anthropic que trabaja con los archivos de tu computadora: los lee, escribe, organiza y ejecuta tareas por ti. Este es un <strong>curso completo en capítulos</strong>, en un solo video y gratis, que va desde el mapa de Claude hasta agentes que demuestran lo que hacen, trabajan de forma segura y funcionan solos. Cada capítulo tiene una guía paso a paso y un prompt listo para copiar. Para verlo, basta con el navegador. El repositorio también incluye la herramienta que armó este video, para que juntes tus propios videos cortos en un curso largo.</p>
+<figure style="margin:22px 0 0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000"><img alt="Claude Code completo: el mapa de Claude, Claude en la oficina, agentes que demuestran, seguridad del agente, bots con la suscripción, arma tu curso largo" loading="lazy" src="../assets/banner-grade-es.jpg" style="width:100%;display:block"/></figure>
+</div></section>
+<section id="video"><div class="wrap">
+<span class="chip">Video</span>
+<h2>Entiende en <span class="amb">3 minutos</span></h2>
+<!-- VIDEO: entra o explicavideo do projeto quando publicado -->
+<p class="sub">El video corto que presenta el curso está en producción y aparecerá aquí cuando se publique. El curso completo ya está justo debajo.</p>
+</div></section>
+<section id="curso"><div class="wrap">
+<span class="chip">El curso</span>
+<h2>Claude Code desde cero hasta un nivel avanzado: <span class="amb">33 minutos</span>, 12 capítulos</h2>
+<p class="sub">Míralo de una vez o salta al capítulo que necesitas: en YouTube, la barra del video ya está dividida en capítulos.</p>
+<div class="yt"><iframe allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/E5ZumaYjzT8" title="Claude Code desde cero hasta un nivel avanzado: curso completo gratis en portugués"></iframe></div>
+<p class="mut" style="margin-top:12px">Abrir en YouTube (video en portugués): <a href="https://www.youtube.com/watch?v=E5ZumaYjzT8" rel="noopener" target="_blank">youtube.com/watch?v=E5ZumaYjzT8</a></p>
+</div></section>
+<section id="capitulos"><div class="wrap">
+<span class="chip">Capítulos</span>
+<h2>De lo básico a lo avanzado, <span class="amb">en orden</span></h2>
+<p class="sub">Haz clic en el tiempo para abrir el curso en ese punto. Cada capítulo tiene la guía completa del tema (gratis) y un prompt listo: abre Claude Code en la carpeta correcta y pégalo.</p>
+<div class="cap"><div><span class="n">01</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=0s" rel="noopener" target="_blank">00:00</a></div><div>
+<h3>Las 25 piezas de Claude</h3>
+<p>El mapa de Claude para quienes no programan: los modelos, los proyectos, la memoria, los conectores, las skills, Cowork y Claude Code, y lo que habilita cada plan.</p>
+<div class="lk"><a href="https://inematds.github.io/claude-25-conceitos/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=eVt7RHdGObM" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Trabajo como &lt;tu profesión&gt;. De las piezas de Claude (proyectos, memoria, conectores, skills, Cowork, Claude Code), ¿cuáles probablemente todavía no uso y cuál debería activar primero? Dame un paso a paso de 5 minutos para empezar por ella.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">02</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=217s" rel="noopener" target="_blank">03:37</a></div><div>
+<h3>Claude como oficina</h3>
+<p>Documentos, presentaciones y piezas de diseño con tu marca, a partir de un Proyecto con el texto "quién soy" (la mayoría funciona incluso en el plan gratis).</p>
+<div class="lk"><a href="https://inematds.github.io/claude-escritorio/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=_2CN3ef0HPU" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Arma para mí un texto "quién soy" para pegar en un Proyecto de Claude: mi negocio es &lt;describe&gt;, mi público es &lt;describe&gt;, mis colores son &lt;colores&gt; y mi forma de hablar es &lt;describe&gt;. Después haz una presentación de 5 diapositivas sobre &lt;tema&gt; usando ese texto.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">03</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=373s" rel="noopener" target="_blank">06:13</a></div><div>
+<h3>13 novedades de Claude Code</h3>
+<p>Lo que Claude Code hace en tu computadora y las novedades más útiles para quienes no programan: subagentes, tareas en segundo plano, paneles y más, con las precauciones para cada una.</p>
+<div class="lk"><a href="https://inematds.github.io/claude-code-2/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://inematds.github.io/claude-code-2-na-pratica-v72/es/" rel="noopener" target="_blank">Curso de Claude Code en la práctica</a><a href="https://www.youtube.com/watch?v=-0c8o2AH2a8" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Mira esta carpeta y dime, en lenguaje sencillo, qué hay aquí. Después propón 3 tareas repetitivas de mi día que podrías hacer en esta carpeta, y haz la primera solo después de que yo diga ok.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">04</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=561s" rel="noopener" target="_blank">09:21</a></div><div>
+<h3>Quién consumió tu límite</h3>
+<p>Cómo leer los registros que Claude Code y Codex ya guardan en tu computadora para ver qué proyecto o rutina consumió el límite semanal de tu suscripción.</p>
+<div class="lk"><a href="https://inematds.github.io/medidor-de-limite/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=sYEEo7CnTys" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Ejecuta el medidor del kit medidor-de-limite en esta máquina y explícame el resultado: qué proyecto o rutina gastó más mi límite en los últimos 7 días y qué puedo juntar o espaciar para gastar menos.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">05</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=713s" rel="noopener" target="_blank">11:53</a></div><div>
+<h3>Las 8 frases que piden pruebas</h3>
+<p>Ocho frases de escritura que hacen que la IA muestre lo que hizo (el archivo, la salida, la prueba) en vez de solo decir «listo», en ChatGPT, Claude o Gemini.</p>
+<div class="lk"><a href="https://inematds.github.io/escrita-e-engenharia/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=MuERu0hBlfo" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Antes de decir que terminaste, ejecuta la verificación y pega aquí la última línea de la salida. Si no tienes cómo probarlo, di qué faltó en lugar de decir "listo".</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">06</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=853s" rel="noopener" target="_blank">14:13</a></div><div>
+<h3>Prompt con pruebas</h3>
+<p>El modelo de solicitud en el que el agente solo puede decir "listo" con la prueba en mano, y el verificador que califica tu solicitud de 0 a 8.</p>
+<div class="lk"><a href="https://inematds.github.io/escrita-e-engenharia/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=UpVrAp4B9oo" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Reescribe este pedido en el formato prompt con prueba: objetivo, cómo vas a probar que lo hiciste, qué cuenta como listo y qué hacer si no se puede. Mi pedido: &lt;pega aquí&gt;.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">07</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=991s" rel="noopener" target="_blank">16:31</a></div><div>
+<h3>El agente que aprende del error</h3>
+<p>Los pasos para que el agente deje de repetir el mismo error: anotar la falla, distinguir un error en la solicitud de un error de la máquina y convertir la lección en un bloqueo automático.</p>
+<div class="lk"><a href="https://inematds.github.io/agente-que-aprende/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=l-D13_QGtHk" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Lee el FALHAS.md y el LESSONS.md de este proyecto. Muéstrame los 3 errores que más se repiten y, para cada uno, propón una traba automática (una prueba, un hook o una verificación) en lugar de una regla escrita más. No apliques nada sin mi aprobación.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">08</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=1163s" rel="noopener" target="_blank">19:23</a></div><div>
+<h3>Rehacer una app pidiendo pruebas</h3>
+<p>Las 4 reglas para que el agente estudie una app y haga su propia versión sin inventar lo que no vio, con un archivo de pruebas que un verificador rechaza cuando faltan pruebas.</p>
+<div class="lk"><a href="https://inematds.github.io/rea-com-provas/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=ROqRYAlKpNY" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Estudia esta app y escribe lo que hace en un archivo de pruebas: para cada función, de dónde lo sacaste (archivo, pantalla o salida). Lo que no viste, márcalo como "no probado" en lugar de suponer.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">09</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=1326s" rel="noopener" target="_blank">22:06</a></div><div>
+<h3>La caja del agente</h3>
+<p>Por qué el agente puede leer tus contraseñas y cómo hacer que trabaje en una caja desechable, sin red y sin tus archivos secretos.</p>
+<div class="lk"><a href="https://inematds.github.io/caixa-do-agente/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=PiBmzECMBrk" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Lista qué archivos de esta carpeta parecen secretos (.env, claves, tokens) y dime cómo ejecutarte aquí dentro de una caja desechable, sin red y sin esos archivos. No abras el contenido de los secretos.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">10</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=1458s" rel="noopener" target="_blank">24:18</a></div><div>
+<h3>Tus repositorios a salvo</h3>
+<p>El diseño en tres capas para no perder tu código si bloquean tu cuenta: una copia en otra empresa, fotos fechadas en un disco tuyo y, si quieres, un servidor propio.</p>
+<div class="lk"><a href="https://inematds.github.io/protegendo-seus-repos/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=CGzG8-GJohs" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Lista mis repositorios git de esta máquina y arma un plan de copia en tres capas: otra empresa de alojamiento, una foto fechada en un disco mío y el comando para comprobar que la copia está completa. Muestra los comandos antes de ejecutarlos.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">11</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=1664s" rel="noopener" target="_blank">27:44</a></div><div>
+<h3>Equipo de bots con la suscripción</h3>
+<p>Un panel de bots con nombre, función, memoria y tareas programadas, que responde con la suscripción de Claude o Codex que ya pagas, sin clave de API.</p>
+<div class="lk"><a href="https://inematds.github.io/time-de-bots/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=lA9BHfoVZDo" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Quiero un equipo de 3 bots para mi trabajo de &lt;profesión&gt;: escribe el papel de cada uno en una frase, la tarea programada de cada uno y lo que cada uno nunca puede hacer sin preguntarme.</span></pre></details>
+</div></div>
+<div class="cap"><div><span class="n">12</span><a class="t" href="https://www.youtube.com/watch?v=E5ZumaYjzT8&amp;t=1837s" rel="noopener" target="_blank">30:37</a></div><div>
+<h3>El panel de tus robots</h3>
+<p>Una sola pantalla que muestra lo que hicieron tus rutinas automáticas durante la noche, quién falló y qué te espera, leída en voz alta en portugués.</p>
+<div class="lk"><a href="https://inematds.github.io/jarvis-painel/guia/es/" rel="noopener" target="_blank">Guía del capítulo →</a><a href="https://www.youtube.com/watch?v=ViFzEStl0Ak" rel="noopener" target="_blank">Video individual (en portugués)</a></div>
+<details><summary>Prompt listo</summary><pre><span class="s">Lista las rutinas automáticas de esta máquina (timers, cron, colas) y dime, para cada una, cuándo se ejecutó por última vez, si salió bien y dónde está el log. Solo lee: no ejecutes ni detengas nada.</span></pre></details>
+</div></div>
+<div class="glos"><h3>Palabras que aparecen aquí</h3><dl>
+<dt>Claude Code</dt><dd>el programa de Anthropic en el que Claude trabaja directamente con los archivos de tu computadora, en la terminal o en la aplicación.</dd>
+<dt>Prompt</dt><dd>el pedido que escribes para la IA.</dd>
+<dt>Agente</dt><dd>una IA que no solo responde: ejecuta pasos por su cuenta (abre archivos, ejecuta comandos) hasta terminar la tarea.</dd>
+<dt>Kit</dt><dd>el paquete gratis de cada capítulo: guía, ejemplos y, cuando los hay, scripts listos.</dd>
+<dt>Suscripción</dt><dd>el plan mensual de Claude (Pro, Max) o de ChatGPT; ningún capítulo requiere una clave de API de pago por uso.</dd>
+</dl></div>
+</div></section>
+<section id="porque"><div class="wrap">
+<span class="chip">Por qué un video largo</span>
+<h2>Quién quiere aprender <span class="amb">queda</span></h2>
+<p class="sub">Nuestro <a href="https://inematds.github.io/youtube-bombando/guia/es/" rel="noopener" target="_blank">radar de lo que está en auge</a> siguió 320 videos de 7 temas de IA (ronda del 12/11/2026) y comparó cada video con el promedio del propio canal. Los videos de más de una hora fueron los que más superaron el promedio.</p>
+<div aria-label="Cuántas veces supera el promedio del propio canal, por duración del video: más de 60 minutos, 4,2 veces; de 8 a 20 minutos, 1,8 veces; de 20 a 60 minutos, 1,0 vez" class="barras" role="img">
+<div class="barra"><span>más de 60 min</span><div class="trilho"><div class="enche" style="width:100%"></div></div><b>4,2×</b></div>
+<div class="barra"><span>8 a 20 min</span><div class="trilho"><div class="enche fraco" style="width:43%"></div></div><b>1,8×</b></div>
+<div class="barra"><span>20 a 60 min</span><div class="trilho"><div class="enche fraco" style="width:24%"></div></div><b>1,0×</b></div>
+</div>
+<p class="mut" style="margin-top:10px;font-size:.88rem">Promedio de cuántas veces cada video superó el rendimiento habitual del propio canal, según la duración. Fuente: radar de lo que se vuelve viral, INEMA, 12/11/2026.</p>
+<div class="nota"><b>El caso que más llamó la atención:</b> un curso completo de Claude Code, de 5 horas, en un canal con cerca de 7 mil suscriptores, hizo <b>513 veces</b> lo habitual del canal. Quien busca aprender quiere todo el recorrido en un solo lugar. <b>Siendo honestos:</b> este primer curso dura 33 minutos, porque usamos solo nuestros propios videos; crece con cada capítulo nuevo. Y con el kit de abajo puedes armar tu curso largo con tus videos.</div>
+</div></section>
+<div class="techhead" id="tecnico"><div class="wrap">
+<span class="chip">Parte técnica</span>
+<h2>El kit: <span class="amb">para quienes quieren armar su propio curso largo</span></h2>
+<p class="sub">De aquí para abajo está la parte técnica: unir tus videos cortos en un video largo con capítulos. Tú <strong>no hace falta</strong> de esta parte para ver el curso.</p>
+</div></div>
+<div class="techzone">
+<section id="oque"><div class="wrap">
+<span class="chip">Qué es</span>
+<h2>Una herramienta <span class="amb">local</span>, sin IA</h2>
+<p class="sub">O <code>montar_curso.py</code> es la misma herramienta que armó el curso de arriba. Le das la lista de videos y títulos; te devuelve el video largo, los capítulos y la descripción.</p>
+<div class="grid g3">
+<div class="card"><h3>Tarjeta del capítulo</h3><p>3 segundos de pantalla negra con "CAPÍTULO N de T" y el título en amarillo y blanco antes de cada video.</p></div>
+<div class="card"><h3>Sonido al mismo volumen</h3><p>Cada video pasa por una normalización de audio para que nadie tenga que ajustar el volumen entre un capítulo y otro.</p></div>
+<div class="card"><h3>Capítulos de YouTube</h3><p>Genera la lista "00:00 Título" con los tiempos reales del video final y la descripción lista para pegar.</p></div>
+</div>
+</div></section>
+<section id="fluxo"><div class="wrap">
+<span class="chip">Cómo funciona</span>
+<h2>De la lista al <span class="amb">video largo</span></h2>
+<div class="flow">
+<span>Lista de videos (JSON o YAML)</span><span class="arr">→</span>
+<span>Revisa cada archivo</span><span class="arr">→</span>
+<span>Tarjeta + video en el mismo formato</span><span class="arr">→</span>
+<span>Une todo</span><span class="arr">→</span>
+<span>MP4 + capítulos + descripción</span>
+</div>
+<p class="sub" style="margin-top:18px">Todos los videos se convierten al mismo tamaño (1920×1080 de forma predeterminada, con bordes si la proporción es diferente), a 30 cuadros por segundo y con audio a −16 LUFS. El capítulo empieza en la tarjeta misma. Al final, la herramienta verifica que la duración del MP4 coincida con la suma de las partes (con hasta 1 s de diferencia) y solo entonces finaliza correctamente.</p>
+</div></section>
+<section id="pre"><div class="wrap">
+<span class="chip">Requisitos previos</span>
+<h2>Qué necesitas</h2>
+<div class="grid g3">
+<div class="card"><h3>Python 3.10 o superior</h3><p>Compruébalo con el comando de abajo.</p><pre><span class="k">python3 --version</span></pre></div>
+<div class="card"><h3>ffmpeg</h3><p>Ubuntu: <code>sudo apt install ffmpeg</code>. Mac: <code>brew install ffmpeg</code>. Windows: instala desde el sitio de ffmpeg y agrégalo al PATH.</p><pre><span class="k">ffmpeg -version</span></pre></div>
+<div class="card"><h3>El kit y Pillow</h3><p>Descarga el repositorio e instala la única dependencia:</p><pre><span class="k">git clone https://github.com/inematds/claude-code-completo</span>
+<span class="k">cd claude-code-completo</span>
+<span class="k">python3 -m pip install -r requirements.txt</span></pre></div>
+</div>
+</div></section>
+<section id="guia"><div class="wrap">
+<span class="chip">Guía de uso · paso a paso</span>
+<h2>En <span class="amb">5 minutos</span></h2>
+<div class="step"><div class="b">1</div><div>
+<h3>Pruébalo con el ejemplo</h3>
+<p>Crea tres videos de prueba y arma un curso de 45 segundos con ellos para ver el resultado antes de usar los tuyos:</p>
+<pre><span class="k">python3 ferramentas/videos_de_teste.py</span>
+<span class="k">python3 ferramentas/montar_curso.py exemplos/meu-curso.json --saida saida/curso.mp4</span></pre>
+</div></div>
+<div class="step"><div class="b">2</div><div>
+<h3>Escribe la lista de tu curso</h3>
+<p>Copia el ejemplo y cambia el título, las descripciones y, en cada capítulo, el archivo y el título. La ruta del video puede ser relativa al archivo, absoluta o empezar con <code>~</code>.</p>
+<pre><span class="k">cp exemplos/meu-curso.json meu-curso.json</span>
+<span class="c"># {"titulo": "...", "descricao_topo": "...", "descricao_fim": "...",</span>
+<span class="c">#  "capitulos": [{"arquivo": "~/videos/aula1.mp4", "titulo": "Primeros pasos"}, ...]}</span></pre>
+</div></div>
+<div class="step"><div class="b">3</div><div>
+<h3>Comprueba los tiempos antes de renderizar</h3>
+<p>Sin gastar tiempo de renderizado, mira los capítulos estimados y las advertencias de YouTube (al menos 3 capítulos, cada uno de 10 s o más):</p>
+<pre><span class="k">python3 ferramentas/montar_curso.py meu-curso.json --saida saida/meu-curso.mp4 --so-capitulos</span></pre>
+</div></div>
+<div class="step"><div class="b">4</div><div>
+<h3>Arma el video largo</h3>
+<p>Un curso de 30 minutos tarda aproximadamente media hora en una computadora común. El resultado incluye tres archivos:</p>
+<pre><span class="k">python3 ferramentas/montar_curso.py meu-curso.json --saida saida/meu-curso.mp4</span>
+<span class="c"># saida/meu-curso.mp4 · saida/meu-curso-capitulos.txt · saida/meu-curso-descricao.txt</span></pre>
+</div></div>
+<div class="step"><div class="b">5</div><div>
+<h3>Publica con los capítulos</h3>
+<p>Sube el MP4 a YouTube y pega el contenido de <code>-descricao.txt</code> en la descripción. YouTube convierte las líneas "00:00 Título" en los capítulos de la barra del video.</p>
+<pre><span class="k">cat saida/meu-curso-descricao.txt</span></pre>
+</div></div>
+<div class="step"><div class="b">6</div><div>
+<h3>Ajustes y pruebas</h3>
+<p>Cambia la duración de la tarjeta, el tamaño o los cuadros por segundo; y ejecuta las pruebas del propio kit (requieren pytest):</p>
+<pre><span class="k">python3 ferramentas/montar_curso.py meu-curso.json --saida saida/meu-curso.mp4 --cartao-s 4 --largura 1280 --altura 720</span>
+<span class="k">python3 -m pytest -q</span>   <span class="c"># 10 pruebas con videos sintéticos</span></pre>
+</div></div>
+</div></section>
+<section id="exemplos"><div class="wrap">
+<span class="chip">Ejemplo real</span>
+<h2>Los capítulos que generó la herramienta <span class="amb">para este curso</span></h2>
+<p class="sub">La lista del curso de arriba está en <a href="https://github.com/inematds/claude-code-completo/blob/main/curso/curso.json" rel="noopener" target="_blank">curso/curso.json</a> (los videos originales no están en el repositorio). Esta fue la salida:</p>
+<pre>00:00 As 25 peças do Claude
+03:37 O Claude como escritório
+06:13 13 novidades do Claude Code
+09:21 Quem comeu o seu limite
+11:53 As 8 frases que pedem prova
+14:13 Prompt com prova
+16:31 O agente que aprende com o erro
+19:23 Refazer um app pedindo prova
+22:06 A caixa do agente
+24:18 Seus repositórios a salvo
+27:44 Time de bots pela assinatura
+30:37 O painel dos seus robôs</pre>
+</div></section>
+<section id="roadmap"><div class="wrap">
+<span class="chip">Roadmap</span>
+<h2>Próximos pasos</h2>
+<div class="phase"><div class="tag">Hoy</div><div class="d"><strong>Curso de 33 min y la herramienta</strong><span>12 capítulos con kit y prompt; montar_curso.py con tarjetas, audio normalizado, capítulos y descripción; 10 pruebas.</span></div></div>
+<div class="phase"><div class="tag">Siguiente</div><div class="d"><strong>Curso más largo</strong><span>Se agregan capítulos a medida que salen videos nuevos, hasta superar una hora.</span></div></div>
+<div class="phase"><div class="tag">Después</div><div class="d"><strong>Subtítulos de todo el curso</strong><span>Une los subtítulos de cada video en un solo archivo, con los tiempos ajustados.</span></div></div>
+</div></section>
+</div>
+<footer>
+<div class="wrap">
+<div class="pill">Python 3</div><div class="pill">ffmpeg</div><div class="pill">sin IA</div><div class="pill">sin API</div><div class="pill">MIT</div>
+<p style="margin-top:18px">claude-code-completo — Claude Code desde cero hasta avanzado ·
+      <a href="https://github.com/inematds/claude-code-completo">inematds/claude-code-completo</a> ·
+      <a href="https://inema.club">INEMA.CLUB</a></p>
+</div>
+</footer>
+<script>
+  (function(){
+    var KEY='claude-code-completo-theme';
+    var b=document.body, t=document.getElementById('themeToggle');
+    if(localStorage.getItem(KEY)==='light'){ b.classList.add('light'); t.textContent='☀️'; }
+    t.addEventListener('click',function(){
+      var light=b.classList.toggle('light');
+      t.textContent=light?'☀️':'🌙';
+      localStorage.setItem(KEY, light?'light':'dark');
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Pillow
+# Opcional, para entradas YAML: pyyaml

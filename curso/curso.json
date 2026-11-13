@@ -1,0 +1,116 @@
+{
+  "titulo": "Claude Code do zero ao avançado: curso completo grátis em português",
+  "descricao_topo": "Curso completo de Claude Code em capítulos, do básico ao avançado, num vídeo só. Cada capítulo tem um kit grátis com guia passo a passo no inema.club, direto na internet.",
+  "descricao_fim": "Kit do curso (capítulos, links e a ferramenta que montou este vídeo): https://inematds.github.io/claude-code-completo/guia/\nTudo grátis no inema.club, direto na internet: https://inema.club",
+  "capitulos": [
+    {
+      "id": "pecas",
+      "arquivo": "~/projetos/output/claude-25-pecas-20261101/entrega/claude-25-pecas-20261101.mp4",
+      "titulo": "As 25 peças do Claude",
+      "aprende": "O mapa do Claude para quem não programa: os modelos, os projetos, a memória, os conectores, as skills, o Cowork e o Claude Code, e o que cada plano libera.",
+      "guia": "https://inematds.github.io/claude-25-conceitos/guia/",
+      "youtube": "https://www.youtube.com/watch?v=eVt7RHdGObM",
+      "prompt": "Eu trabalho com <sua profissão>. Das peças do Claude (projetos, memória, conectores, skills, Cowork, Claude Code), quais eu provavelmente ainda não uso e qual delas eu devo ligar primeiro? Me dê um passo a passo de 5 minutos para começar por ela."
+    },
+    {
+      "id": "escritorio",
+      "arquivo": "~/projetos/output/claude-escritorio-20261104/entrega/claude-escritorio-20261104.mp4",
+      "titulo": "O Claude como escritório",
+      "aprende": "Documentos, apresentações e peças de design saindo com a sua marca, a partir de um Projeto com o texto \"quem eu sou\" (a maior parte funciona até no plano grátis).",
+      "guia": "https://inematds.github.io/claude-escritorio/guia/",
+      "youtube": "https://www.youtube.com/watch?v=_2CN3ef0HPU",
+      "prompt": "Monte para mim um texto \"quem eu sou\" para colar num Projeto do Claude: meu negócio é <descreva>, meu público é <descreva>, minhas cores são <cores> e meu jeito de falar é <descreva>. Depois faça uma apresentação de 5 slides sobre <assunto> usando esse texto."
+    },
+    {
+      "id": "novidades",
+      "arquivo": "~/projetos/output/claude-code-13-novidades-20261104/entrega/claude-code-13-novidades-20261104.mp4",
+      "titulo": "13 novidades do Claude Code",
+      "aprende": "O que o Claude Code faz no seu computador e as novidades mais úteis para quem não programa: subagentes, tarefas em segundo plano, painéis e mais, com o cuidado de cada uma.",
+      "guia": "https://inematds.github.io/claude-code-2/guia/",
+      "curso": "https://inematds.github.io/claude-code-2-na-pratica-v72/",
+      "youtube": "https://www.youtube.com/watch?v=-0c8o2AH2a8",
+      "prompt": "Olhe esta pasta e me diga, em linguagem simples, o que tem aqui. Depois proponha 3 tarefas repetitivas do meu dia que você poderia fazer nesta pasta, e faça a primeira só depois que eu disser ok."
+    },
+    {
+      "id": "limite",
+      "arquivo": "~/projetos/output/medidor-limite-20261108/entrega/medidor-limite-20261108.mp4",
+      "titulo": "Quem comeu o seu limite",
+      "aprende": "Como ler os registros que o Claude Code e o Codex já gravam no seu computador para ver qual projeto ou rotina gastou o limite da semana da sua assinatura.",
+      "guia": "https://inematds.github.io/medidor-de-limite/guia/",
+      "youtube": "https://www.youtube.com/watch?v=sYEEo7CnTys",
+      "prompt": "Rode o medidor do kit medidor-de-limite nesta máquina e me explique o resultado: qual projeto ou rotina mais gastou o meu limite nos últimos 7 dias e o que eu posso juntar ou espaçar para gastar menos."
+    },
+    {
+      "id": "frases",
+      "arquivo": "~/projetos/output/escrita-prova-lives3-20261112/entrega/escrita-prova-lives3-20261112.mp4",
+      "titulo": "As 8 frases que pedem prova",
+      "aprende": "Oito frases de escrita que fazem a IA mostrar o que fez (o arquivo, a saída, o teste) em vez de só dizer \"pronto\", no ChatGPT, no Claude ou no Gemini.",
+      "guia": "https://inematds.github.io/escrita-e-engenharia/guia/",
+      "youtube": "https://www.youtube.com/watch?v=MuERu0hBlfo",
+      "prompt": "Antes de dizer que terminou, rode a checagem e cole aqui a última linha da saída. Se não tiver como provar, diga o que faltou em vez de dizer \"pronto\"."
+    },
+    {
+      "id": "prova",
+      "arquivo": "~/projetos/output/prompt-com-prova-v2-20261112/entrega/prompt-com-prova-v2-20261112.mp4",
+      "titulo": "Prompt com prova",
+      "aprende": "O modelo de pedido em que o agente só pode dizer \"pronto\" com a prova na mão, e o checador que dá nota de 0 a 8 ao seu pedido.",
+      "guia": "https://inematds.github.io/escrita-e-engenharia/guia/",
+      "youtube": "https://www.youtube.com/watch?v=UpVrAp4B9oo",
+      "prompt": "Reescreva este meu pedido no formato prompt com prova: objetivo, como você vai provar que fez, o que conta como pronto e o que fazer se não der. Meu pedido: <cole aqui>."
+    },
+    {
+      "id": "aprende",
+      "arquivo": "~/projetos/output/agente-aprende-20261107/entrega/agente-aprende-20261107.mp4",
+      "titulo": "O agente que aprende com o erro",
+      "aprende": "Os degraus para o agente parar de repetir o mesmo erro: anotar a falha, separar erro de pedido de erro de máquina e transformar a lição numa trava automática.",
+      "guia": "https://inematds.github.io/agente-que-aprende/guia/",
+      "youtube": "https://www.youtube.com/watch?v=l-D13_QGtHk",
+      "prompt": "Leia o FALHAS.md e o LESSONS.md deste projeto. Me mostre os 3 erros que mais voltam e, para cada um, proponha uma trava automática (um teste, um hook ou uma checagem) em vez de mais uma regra escrita. Não aplique nada sem eu aprovar."
+    },
+    {
+      "id": "rea",
+      "arquivo": "~/projetos/output/rea-provas-20261108/entrega/rea-provas-20261108.mp4",
+      "titulo": "Refazer um app pedindo prova",
+      "aprende": "As 4 regras para o agente estudar um app e fazer a sua versão sem inventar o que não viu, com um arquivo de provas que um conferidor reprova quando falta prova.",
+      "guia": "https://inematds.github.io/rea-com-provas/guia/",
+      "youtube": "https://www.youtube.com/watch?v=ROqRYAlKpNY",
+      "prompt": "Estude este app e escreva o que ele faz num arquivo de provas: para cada função, de onde você tirou (arquivo, tela ou saída). O que você não viu, marque como \"não provado\" em vez de supor."
+    },
+    {
+      "id": "caixa",
+      "arquivo": "~/projetos/output/caixa-agente-simples-20261112/entrega/caixa-agente-simples-20261112.mp4",
+      "titulo": "A caixa do agente",
+      "aprende": "Por que o agente consegue ler as suas senhas e como fazê-lo trabalhar numa caixa descartável, sem rede e sem os seus arquivos de segredo.",
+      "guia": "https://inematds.github.io/caixa-do-agente/guia/",
+      "youtube": "https://www.youtube.com/watch?v=PiBmzECMBrk",
+      "prompt": "Liste quais arquivos desta pasta têm cara de segredo (.env, chaves, tokens) e me diga como rodar você aqui dentro de uma caixa descartável, sem rede e sem esses arquivos. Não abra o conteúdo dos segredos."
+    },
+    {
+      "id": "repos",
+      "arquivo": "~/projetos/output/protegendo-repos-20261105/entrega/protegendo-repos-20261105.mp4",
+      "titulo": "Seus repositórios a salvo",
+      "aprende": "O desenho em três camadas para não perder o seu código se a conta for bloqueada: cópia em outra empresa, fotos datadas num disco seu e, se quiser, um servidor próprio.",
+      "guia": "https://inematds.github.io/protegendo-seus-repos/guia/",
+      "youtube": "https://www.youtube.com/watch?v=CGzG8-GJohs",
+      "prompt": "Liste os meus repositórios git desta máquina e monte um plano de cópia em três camadas: outra empresa de hospedagem, uma foto datada num disco meu e o comando para conferir que a cópia está inteira. Mostre os comandos antes de rodar."
+    },
+    {
+      "id": "bots",
+      "arquivo": "~/projetos/output/time-de-bots-20261109/entrega/time-de-bots-20261109.mp4",
+      "titulo": "Time de bots pela assinatura",
+      "aprende": "Um painel de bots com nome, papel, memória e tarefas agendadas, respondendo pela assinatura do Claude ou do Codex que você já paga, sem chave de API.",
+      "guia": "https://inematds.github.io/time-de-bots/guia/",
+      "youtube": "https://www.youtube.com/watch?v=lA9BHfoVZDo",
+      "prompt": "Quero um time de 3 bots para o meu trabalho de <profissão>: escreva o papel de cada um em uma frase, a tarefa agendada de cada um e o que cada um nunca pode fazer sem me perguntar."
+    },
+    {
+      "id": "painel",
+      "arquivo": "~/projetos/output/jarvis-painel-20261108/entrega/jarvis-painel-20261108.mp4",
+      "titulo": "O painel dos seus robôs",
+      "aprende": "Uma tela única que mostra o que as suas rotinas automáticas fizeram de madrugada, quem falhou e o que espera por você, lida em voz alta em português.",
+      "guia": "https://inematds.github.io/jarvis-painel/guia/",
+      "youtube": "https://www.youtube.com/watch?v=ViFzEStl0Ak",
+      "prompt": "Liste as rotinas automáticas desta máquina (timers, cron, filas) e me diga, para cada uma, quando rodou pela última vez, se deu certo e onde está o log. Só leia: não rode nem pare nada."
+    }
+  ]
+}

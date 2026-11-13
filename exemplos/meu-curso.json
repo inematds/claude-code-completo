@@ -1,0 +1,10 @@
+{
+  "titulo": "Meu primeiro curso",
+  "descricao_topo": "Aprenda com estas três aulas práticas.",
+  "descricao_fim": "Bom estudo!",
+  "capitulos": [
+    {"arquivo": "videos/aula1.mp4", "titulo": "Primeiros passos"},
+    {"arquivo": "videos/aula2.mp4", "titulo": "Colocando em prática"},
+    {"arquivo": "videos/aula3.mp4", "titulo": "Próximos passos"}
+  ]
+}
