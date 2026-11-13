@@ -361,7 +361,8 @@
 <h3>Ajustes e testes</h3>
 <p>Mude a duração do cartão, o tamanho ou os quadros por segundo; e rode os testes do próprio kit (pedem o pytest):</p>
 <pre><span class="k">python3 ferramentas/montar_curso.py meu-curso.json --saida saida/meu-curso.mp4 --cartao-s 4 --largura 1280 --altura 720</span>
-<span class="k">python3 -m pytest -q</span>   <span class="c"># 10 testes com vídeos sintéticos</span></pre>
+<span class="k">pip install pytest</span>
+<span class="k">python3 -m pytest -q</span>   <span class="c"># 10 testes com vídeos sintéticos (9 + 1 pulado sem o PyYAML)</span></pre>
 </div></div>
 </div></section>
 <section id="exemplos"><div class="wrap">

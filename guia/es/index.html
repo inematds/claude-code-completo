@@ -270,7 +270,7 @@
 </div></section>
 <section id="porque"><div class="wrap">
 <span class="chip">Por qué un video largo</span>
-<h2>Quién quiere aprender <span class="amb">queda</span></h2>
+<h2>Quien quiere aprender <span class="amb">se queda</span></h2>
 <p class="sub">Nuestro <a href="https://inematds.github.io/youtube-bombando/guia/es/" rel="noopener" target="_blank">radar de lo que está en auge</a> siguió 320 videos de 7 temas de IA (ronda del 12/11/2026) y comparó cada video con el promedio del propio canal. Lo muy corto y lo muy largo llegaron más lejos que lo intermedio.</p>
 <div aria-label="Mediana de cuántas veces el normal del propio canal, por duración: hasta 8 minutos 5,7 veces; 8 a 20 minutos 1,8 veces; 20 a 60 minutos 1,0 vez; más de 60 minutos 4,2 veces" class="barras" role="img">
 <div class="barra"><span>hasta 8 min</span><div class="trilho"><div class="enche" style="width:100%"></div></div><b>5,7×</b></div>
@@ -361,7 +361,8 @@
 <h3>Ajustes y pruebas</h3>
 <p>Cambia la duración de la tarjeta, el tamaño o los cuadros por segundo; y ejecuta las pruebas del propio kit (requieren pytest):</p>
 <pre><span class="k">python3 ferramentas/montar_curso.py meu-curso.json --saida saida/meu-curso.mp4 --cartao-s 4 --largura 1280 --altura 720</span>
-<span class="k">python3 -m pytest -q</span>   <span class="c"># 10 pruebas con videos sintéticos</span></pre>
+<span class="k">pip install pytest</span>
+<span class="k">python3 -m pytest -q</span>   <span class="c"># 10 pruebas con videos sintéticos (9 + 1 omitida sin PyYAML)</span></pre>
 </div></div>
 </div></section>
 <section id="exemplos"><div class="wrap">

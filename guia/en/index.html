@@ -279,7 +279,7 @@
 <div class="barra"><span>over 60 min</span><div class="trilho"><div class="enche" style="width:74%"></div></div><b>4.2×</b></div>
 </div>
 <p class="mut" style="margin-top:10px;font-size:.88rem">Median of how many times its channel's usual each video did, by length (20, 48, 31 and 33 videos). Source: INEMA's what's trending radar, November 12, 2026.</p>
-<div class="nota"><b>The case that drew the most attention:</b> a 5-hour complete Claude Code course on a channel with around 7,000 subscribers got <b>513 times</b> the channel's usual format. People looking to learn want the whole journey in one place. <b>Honestly:</b> This first course is 33 minutes long because we only use our own videos; it grows with each new chapter. And with the kit below, you can build your own long-form course using your own videos.</div>
+<div class="nota"><b>The case that drew the most attention:</b> a 5-hour complete Claude Code course on a channel with around 7,000 subscribers got <b>513 times</b> the channel's usual performance. People looking to learn want the whole journey in one place. <b>Honestly:</b> This first course is 33 minutes long because we only use our own videos; it grows with each new chapter. And with the kit below, you can build your own long-form course using your own videos.</div>
 </div></section>
 <div class="techhead" id="tecnico"><div class="wrap">
 <span class="chip">Technical details</span>
@@ -361,7 +361,8 @@
 <h3>Settings and tests</h3>
 <p>Change the card duration, size, or frame rate; and run the kit's own tests (they require pytest):</p>
 <pre><span class="k">python3 ferramentas/montar_curso.py meu-curso.json --saida saida/meu-curso.mp4 --cartao-s 4 --largura 1280 --altura 720</span>
-<span class="k">python3 -m pytest -q</span>   <span class="c"># 10 tests with synthetic videos</span></pre>
+<span class="k">pip install pytest</span>
+<span class="k">python3 -m pytest -q</span>   <span class="c"># 10 tests with synthetic videos (9 + 1 skipped without PyYAML)</span></pre>
 </div></div>
 </div></section>
 <section id="exemplos"><div class="wrap">
